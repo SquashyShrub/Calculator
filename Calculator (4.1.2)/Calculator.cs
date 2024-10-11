@@ -188,21 +188,24 @@ namespace Assignment_4._1._2
         {
             option = character;
             num1 = double.Parse(txtDisplay.Text);
-            txtDisplay.Text = operate.Percent(num1).ToString();
             if (option == "%")
             {
+                txtDisplay.Text = operate.Percent(num1).ToString();
                 historyList.Items.Add($"{num1} {option} = {txtDisplay.Text}");
             }
             else if (option == "√")
             {
+                txtDisplay.Text = operate.SqRoot(num1).ToString();
                 historyList.Items.Add($"{option}{num1} = {txtDisplay.Text}");
             }
             else if (option == "^")
             {
+                txtDisplay.Text = operate.Square(num1).ToString();
                 historyList.Items.Add($"{num1}{option}2 = {txtDisplay.Text}");
             }
             else if (option == "1/x")
             {
+                txtDisplay.Text = operate.Fraction(num1).ToString();
                 historyList.Items.Add($"1/{num1} = {txtDisplay.Text}");
             }
             textNumber = txtDisplay.TextLength;
